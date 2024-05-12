@@ -8,6 +8,7 @@ bool estado_LED_ligado = 0;
 //unsigned long debounceDelay = 10;
 //unsigned long debounceDelay2 = 100;
 
+
 enum state {
   desligado,
   LED_verde,
@@ -116,6 +117,9 @@ void loop() {
         estado = desligado;
       }
       delay(10);
+      while ((digitalRead(6)) == HIGH){
+         delay(10);
+      }
       if(digitalRead(5) == 1){
         
         estado = LED_amarelo;
@@ -152,6 +156,9 @@ void loop() {
         estado = desligado;
       }
       delay(10);
+      while ((digitalRead(5)) == HIGH){
+         delay(10);
+      }
       if(digitalRead(6) == 1){
         
         estado = LED_verde;
@@ -187,6 +194,9 @@ void loop() {
         
         estado = desligado;
       }
+      while ((digitalRead(4)) == HIGH){
+         delay(10);
+      }      
       delay(10);
       if(digitalRead(5) == 1){
         
